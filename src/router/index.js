@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import VuexTrain from '../components/VuexTrain.vue'
-import ObjectLast from '../components/ObjectLast.vue'
+import ObjectLast from '../views/ObjectLast.vue'
 
 Vue.use(VueRouter)
 const routes = [

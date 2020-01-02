@@ -2,13 +2,25 @@
   <div id="app">
     <div id="nav">
       <router-link to="/"><button>Home</button></router-link>
-      <router-link to="/about"><button>About</button></router-link>
+      <button @click="createAboutWindow">About</button>
       <router-link to="/vuextrain"><button>Vuex</button></router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
+<script>
+import {ipcRenderer} from 'electron';
+
+export default {
+  
+  methods: {
+    createAboutWindow(){
+      ipcRenderer.send('about:create');
+    }
+  }
+}
+</script>
 <style>
 #app {
   text-align: center;
